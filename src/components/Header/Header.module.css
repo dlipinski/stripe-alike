@@ -1,0 +1,66 @@
+.Header {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.Logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -0.1rem;
+}
+
+.Nav {
+  display: flex;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: default;
+}
+.Nav div {
+  padding: 1.5rem 1rem;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+.Nav div:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.Button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.MenuContainer {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.ArrowUp {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  transition: left 0.25s;
+  z-index: -1;
+}
+
+.Menu {
+  min-width: 35rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+}
