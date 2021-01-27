@@ -1,0 +1,18 @@
+.Arrow {
+  transform: translateX(-3px);
+  transition: .2s;
+}
+.Line {
+  transform: translateX(-3px);
+  opacity: 0;
+  transition: .2s;
+}
+
+svg.Visible .Arrow {
+	transform: translateX(0px);
+}
+
+svg.Visible .Line {
+  transform: translateX(0px);
+  opacity: 1;
+}

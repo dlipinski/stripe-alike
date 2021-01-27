@@ -1,9 +1,60 @@
+.TopBackground {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 40rem;
+  width: 150vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  transform: rotate(-10deg);
+  top: -22rem;
+  left: -10rem;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+
+.BackgroundLinesContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: -3;
+}
+
+.BackgroundLines {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.BackgroundLines div {
+  border-right: 2px dashed #ddd;
+;
+  height: 100vh;
+}
+.BackgroundLines div:first-child {
+  border-left: 2px dashed #ddd;
+}
 .Header {
   display: flex;
   color: #fff;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -11,6 +62,7 @@
   font-weight: 700;
   font-size: 1.6rem;
   letter-spacing: -0.1rem;
+  width: 7rem;
 }
 
 .Nav {
@@ -20,9 +72,10 @@
   cursor: default;
 }
 .Nav div {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   transition: 0.2s;
   box-sizing: border-box;
+  letter-spacing: .01rem;
 }
 .Nav div:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -30,11 +83,14 @@
 
 .Button {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 0;
   cursor: pointer;
+  letter-spacing: 0.05rem;
+  width: 7rem;
+  text-align: center;
 }
 .Button:hover {
   background: rgba(255, 255, 255, 0.4);
@@ -45,6 +101,9 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  transform-origin: top;
+  transition: .2s;
+
 }
 
 .ArrowUp {
@@ -55,12 +114,74 @@
   transform: rotate(45deg);
   position: absolute;
   transition: left 0.25s;
+  transition-delay: .05s;
+  margin-top: -.1rem;
   z-index: -1;
 }
 
 .Menu {
-  min-width: 35rem;
   background: #fff;
-  border-radius: 0.5rem;
-  padding: 2.5rem;
+  border-radius: .75rem;
+  transition: .25s;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+.Appear {
+  animation: appearPosition .05s forwards, appearOpacity .5s forwards;
+}
+
+.Dissapear {
+  animation: dissappearPosition .05s forwards, dissappearOpacity .5s forwards;
+}
+
+.Visible {
+  opacity: 1;
+}
+
+.Hidden {
+  opacity: 0;
+}
+
+@keyframes appearPosition {
+  from {
+    position: absolute;
+    z-index: -1;
+  }
+  to {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes dissappearPosition {
+  from {
+    position: relative;
+    z-index: 1;
+  }
+  to {
+    position: absolute;
+    z-index: -1;
+  }
+}
+@keyframes appearOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dissappearOpacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
