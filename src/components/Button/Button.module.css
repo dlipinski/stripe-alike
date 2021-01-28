@@ -1,35 +1,35 @@
 .Button {
-  display: flex;
-  padding: .5rem 1rem;
+  display: inline;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
-  font-size: 15px!important;
+  font-size: 15px !important;
   font-weight: 500;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   height: 1.1rem;
   align-items: center;
   cursor: pointer;
-  transition: .2s;
-  padding-right: .75rem;
+  transition: 0.2s;
+  padding-right: 0.75rem;
 }
 
 .Button span {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 .Light {
-  background: rgba(255,255,255,.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .Light:hover {
-  background: rgba(255,255,255,.4);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .Default {
   background: #0a2540;
-  color:#fff!important;
+  color: #fff !important;
 }
 
 .Transparent {
-  color: #0a2540!important;
+  color: #0a2540 !important;
   background: none;
 }

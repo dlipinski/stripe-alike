@@ -8,23 +8,21 @@
   left: 0;
   top: 0;
   z-index: -2;
-  transform: rotate(-10deg);
-  top: -22rem;
+  transform: rotate(-15deg);
+  top: -22.4rem;
   left: -10rem;
 }
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
-
-
 
 .BackgroundLinesContainer {
   position: absolute;
@@ -43,18 +41,18 @@
 
 .BackgroundLines div {
   border-right: 2px dashed #ddd;
-;
   height: 100vh;
 }
 .BackgroundLines div:first-child {
-  border-left: 2px dashed #ddd;
+  border-left: 1px dashed #ddd;
 }
 .Header {
   display: flex;
   color: #fff;
   justify-content: space-between;
   align-items: center;
-  max-width: 1150px;
+  max-width: 1050px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -75,7 +73,7 @@
   padding: 1.5rem;
   transition: 0.2s;
   box-sizing: border-box;
-  letter-spacing: .01rem;
+  letter-spacing: 0.01rem;
 }
 .Nav div:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -102,8 +100,7 @@
   display: flex;
   justify-content: center;
   transform-origin: top;
-  transition: .2s;
-
+  transition: 0.2s;
 }
 
 .ArrowUp {
@@ -114,29 +111,29 @@
   transform: rotate(45deg);
   position: absolute;
   transition: left 0.25s;
-  transition-delay: .05s;
-  margin-top: -.1rem;
+  transition-delay: 0.05s;
+  margin-top: -0.1rem;
   z-index: -1;
 }
 
 .Menu {
   background: #fff;
-  border-radius: .75rem;
-  transition: .25s;
+  border-radius: 0.75rem;
+  transition: 0.25s;
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
   position: relative;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-
 .Appear {
-  animation: appearPosition .05s forwards, appearOpacity .5s forwards;
+  animation: appearPosition 0.05s forwards, appearOpacity 0.5s forwards;
 }
 
 .Dissapear {
-  animation: dissappearPosition .05s forwards, dissappearOpacity .5s forwards;
+  animation: dissappearPosition 0.05s forwards, dissappearOpacity 0.5s forwards;
 }
 
 .Visible {
